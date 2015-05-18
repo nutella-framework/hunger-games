@@ -1,0 +1,29 @@
+{
+  "name": "aggregate-interface",
+  "version": "1.0.0",
+  "description": "Statistics interface for demo purpose",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nutella-framework/aggregate-interface.git"
+  },
+  "keywords": [
+    "nutella",
+    "web",
+    "interface",
+    "base"
+  ],
+  "author": "Gianluca Venturini <gianluca.91@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nutella-framework/aggregate-interface/issues"
+  },
+  "homepage": "https://github.com/nutella-framework/aggregate-interface#readme",
+  "private": true,
+  "dependencies": {
+    "nutella_lib": "^0.5.4"
+  }
+}
