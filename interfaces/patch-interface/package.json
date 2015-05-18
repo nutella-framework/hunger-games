@@ -1,0 +1,29 @@
+{
+  "name": "basic-web-interface",
+  "version": "1.0.0",
+  "description": "The simplest possible nutella interface designed using web technologies",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nutella-framework/basic-web-interface.git"
+  },
+  "keywords": [
+    "nutella",
+    "web",
+    "interface",
+    "base"
+  ],
+  "author": "Alessandro Gnoli <tebemis@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nutella-framework/basic-web-interface/issues"
+  },
+  "homepage": "https://github.com/nutella-framework/basic-web-interface#readme",
+  "private": true,
+  "dependencies": {
+    "nutella_lib": "^0.5.4"
+  }
+}
