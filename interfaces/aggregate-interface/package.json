@@ -24,6 +24,6 @@
   "homepage": "https://github.com/nutella-framework/aggregate-interface#readme",
   "private": true,
   "dependencies": {
-    "nutella_lib": "^0.5.4"
+    "nutella_lib": "^0.6.0"
   }
 }
