@@ -6,11 +6,13 @@ var componentId = NUTELLA.parseComponentId();
 var nutella = NUTELLA.init(cliArgs.broker, cliArgs.app_id, cliArgs.run_id, componentId);
 
 
-// State veriables
-var scores = {};        // Stores the scores for all beacons in the format {"beacon10":8,"beacon5":23, ... ,"beacon1":22}
+// State
 var foraging = false;   // Boolean variables that indicates if we are foraging or not
-var stats = {};         // Statistics for all students, served to the interface that visualizes them
 var timers = {};        // Stores the timers used to calculate the score
+
+// Persistence (to file)
+// Stores the scores for all beacons in the format {"beacon10":8,"beacon5":23, ... ,"beacon1":22}
+var scores = nutella.persist.getJsonObjectStore('scores');
 
 
 // Handles the starting of the foraging bot
@@ -22,7 +24,7 @@ nutella.net.subscribe('start_foraging_bout', function(message, from) {
 // Handles the end of the foraging bot
 nutella.net.subscribe('stop_foraging_bout', function(message, from) {
     foraging = false;
-    stats = scores;
+    scores.save();
 });
 
 
@@ -65,6 +67,6 @@ function beaconExited(beacon, patch) {
 
 //  Handles the requests for the stats of all students
 nutella.net.handle_requests('complete_stats', function(message, from) {
-    return stats;
+    return scores;
 });
 
